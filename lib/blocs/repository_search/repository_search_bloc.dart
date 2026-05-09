@@ -1,1 +1,36 @@
-class RepositorySearchBloc {}
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../repositories/github_repository.dart';
+import '../../utils/constants.dart';
+import 'repository_search_event.dart';
+import 'repository_search_state.dart';
+
+class RepositorySearchBloc
+    extends Bloc<RepositorySearchEvent, RepositorySearchState> {
+  final GithubRepository repository;
+
+  RepositorySearchBloc(this.repository) : super(RepositorySearchInitial()) {
+    on<SearchRepositoriesRequested>(_onSearchRepositoriesRequested);
+  }
+
+  Future<void> _onSearchRepositoriesRequested(
+    SearchRepositoriesRequested event,
+    Emitter<RepositorySearchState> emit,
+  ) async {
+    emit(RepositorySearchLoading());
+
+    try {
+      final repositories = await repository.searchRepositories(event.query);
+
+      if (repositories.isEmpty) {
+        emit(RepositorySearchError(Constants.noRepositoriesFoundMessage));
+
+        return;
+      }
+
+      emit(RepositorySearchLoaded(repositories));
+    } catch (e) {
+      emit(RepositorySearchError(Constants.genericErrorMessage));
+    }
+  }
+}

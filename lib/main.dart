@@ -13,9 +13,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'GitHub Repository Search',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
+      theme: ThemeData(useMaterial3: true),
       home: const HomePage(),
     );
   }
