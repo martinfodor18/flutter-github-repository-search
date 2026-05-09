@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31156ed7-5dfc-4980-920e-5f99385ce151" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="31156ed7-5dfc-4980-920e-5f99385ce151" name="Changes" comment="Initial commit: Initialize Flutter project with Android, iOS, and Web support">
+      <change afterPath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/providers/theme_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositories/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/services/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/theme/app_theme.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/error_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/loading_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +32,13 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -22,6 +46,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="3DTvXH1uEHMfTZgqWXSVtQSF7Re" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,10 +67,17 @@
     "git-widget-placeholder": "main",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/marti/StudioProjects/flutter_github_repository_search",
+    "last_opened_file_path": "C:/Users/marti/StudioProjects/flutter_github_repository_search/lib/services",
+    "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marti\StudioProjects\flutter_github_repository_search\lib\services" />
+      <recent name="C:\Users\marti\StudioProjects\flutter_github_repository_search\lib\repositories" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="31156ed7-5dfc-4980-920e-5f99385ce151" name="Changes" comment="" />
@@ -52,6 +86,19 @@
       <option name="presentableId" value="Default" />
       <updated>1778318911904</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit: Initialize Flutter project with Android, iOS, and Web support">
+      <option name="closed" value="true" />
+      <created>1778319849850</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778319849850</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit: Initialize Flutter project with Android, iOS, and Web support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit: Initialize Flutter project with Android, iOS, and Web support" />
   </component>
 </project>
