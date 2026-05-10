@@ -11,6 +11,7 @@ class RepositorySearchBloc
 
   RepositorySearchBloc(this.repository) : super(RepositorySearchInitial()) {
     on<SearchRepositoriesRequested>(_onSearchRepositoriesRequested);
+    on<LoadCachedRepositories>(_onLoadCachedRepositories);
   }
 
   Future<void> _onSearchRepositoriesRequested(
@@ -31,6 +32,23 @@ class RepositorySearchBloc
       emit(RepositorySearchLoaded(repositories));
     } catch (e) {
       emit(RepositorySearchError(Constants.genericErrorMessage));
+    }
+  }
+
+  Future<void> _onLoadCachedRepositories(
+      LoadCachedRepositories event,
+      Emitter<RepositorySearchState> emit,
+      ) async {
+    final repositories =
+    await repository
+        .getCachedRepositories();
+
+    if (repositories.isNotEmpty) {
+      emit(
+        RepositorySearchLoaded(
+          repositories,
+        ),
+      );
     }
   }
 }

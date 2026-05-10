@@ -5,3 +5,5 @@ class SearchRepositoriesRequested extends RepositorySearchEvent {
 
   SearchRepositoriesRequested(this.query);
 }
+
+class LoadCachedRepositories extends RepositorySearchEvent {}

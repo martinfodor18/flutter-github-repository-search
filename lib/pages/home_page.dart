@@ -36,6 +36,13 @@ class _HomeViewState extends State<HomeView> {
   final TextEditingController _controller = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+
+    context.read<RepositorySearchBloc>().add(LoadCachedRepositories());
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text(Constants.appTitle)),
@@ -47,53 +54,36 @@ class _HomeViewState extends State<HomeView> {
               alignment: Alignment.centerLeft,
               child: Text(
                 'Hello!',
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineLarge,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
             ),
             const SizedBox(height: Constants.largePadding),
             SearchInput(
               controller: _controller,
               onSearch: () {
-                final query =
-                _controller.text.trim();
+                final query = _controller.text.trim();
 
                 if (query.isEmpty) {
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(
-                    const SnackBar(
-                      content: Text(
-                        Constants.emptySearchMessage,
-                      ),
-                    ),
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text(Constants.emptySearchMessage)),
                   );
 
                   return;
                 }
 
-                context
-                    .read<RepositorySearchBloc>()
-                    .add(
-                  SearchRepositoriesRequested(
-                    query,
-                  ),
+                context.read<RepositorySearchBloc>().add(
+                  SearchRepositoriesRequested(query),
                 );
               },
             ),
             const SizedBox(height: Constants.largePadding),
             Expanded(
-              child: BlocConsumer<
-                  RepositorySearchBloc,
-                  RepositorySearchState>(
+              child: BlocConsumer<RepositorySearchBloc, RepositorySearchState>(
                 listener: (context, state) {
                   if (state is RepositorySearchError) {
-                    ScaffoldMessenger.of(context)
-                        .showSnackBar(
-                      SnackBar(
-                        content: Text(state.message),
-                      ),
-                    );
+                    ScaffoldMessenger.of(
+                      context,
+                    ).showSnackBar(SnackBar(content: Text(state.message)));
                   }
                 },
                 builder: (context, state) {
@@ -103,21 +93,19 @@ class _HomeViewState extends State<HomeView> {
 
                   if (state is RepositorySearchLoaded) {
                     return ListView.builder(
-                      padding: const EdgeInsets.only(
-                        right: kIsWeb ? 8 : 0,
-                      ),
+                      padding: const EdgeInsets.only(right: kIsWeb ? 8 : 0),
                       itemCount: state.repositories.length,
                       itemBuilder: (context, index) {
                         final repository = state.repositories[index];
 
-                        return RepositoryCard(
-                          repository: repository,
-                        );
+                        return RepositoryCard(repository: repository);
                       },
                     );
                   }
 
-                  return const EmptyView(message: Constants.initialSearchMessage);
+                  return const EmptyView(
+                    message: Constants.initialSearchMessage,
+                  );
                 },
               ),
             ),

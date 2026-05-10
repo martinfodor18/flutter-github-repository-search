@@ -9,11 +9,24 @@ class RepositoryModel {
     required this.updatedAt,
   });
 
-  factory RepositoryModel.fromJson(Map<String, dynamic> json) {
+  factory RepositoryModel.fromJson(
+      Map<String, dynamic> json,
+      ) {
     return RepositoryModel(
       name: json['name'],
       description: json['description'],
-      updatedAt: DateTime.parse(json['updated_at']),
+      updatedAt: DateTime.parse(
+        json['updated_at'],
+      ),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'name': name,
+      'description': description,
+      'updated_at':
+      updatedAt.toIso8601String(),
+    };
   }
 }
