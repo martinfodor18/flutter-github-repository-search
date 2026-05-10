@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
+import 'theme/app_theme.dart';
 
 void main() {
   runApp(const App());
@@ -13,7 +14,8 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'GitHub Repository Search',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       home: const HomePage(),
     );
   }

@@ -1,9 +1,11 @@
 class Constants {
-  static const String appTitle = 'GitHub Repository Search';
+  static const String appTitle = 'GitHub Search';
 
   static const String githubBaseUrl = 'https://api.github.com';
 
   static const double defaultPadding = 16;
+
+  static const double largePadding = 24;
 
   static const String genericErrorMessage = 'Something went wrong.';
 

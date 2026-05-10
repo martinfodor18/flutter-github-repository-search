@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -6,6 +7,7 @@ import '../blocs/repository_search/repository_search_event.dart';
 import '../blocs/repository_search/repository_search_state.dart';
 import '../repositories/github_repository.dart';
 import '../services/github_api_service.dart';
+import '../theme/app_theme.dart';
 import '../utils/constants.dart';
 import '../widgets/empty_view.dart';
 import '../widgets/repository_card.dart';
@@ -36,11 +38,21 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('GitHub Repository Search')),
+      appBar: AppBar(title: const Text(Constants.appTitle)),
       body: Padding(
         padding: const .all(Constants.defaultPadding),
         child: Column(
           children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Hello!',
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineLarge,
+              ),
+            ),
+            const SizedBox(height: Constants.largePadding),
             SearchInput(
               controller: _controller,
               onSearch: () {
@@ -69,7 +81,7 @@ class _HomeViewState extends State<HomeView> {
                 );
               },
             ),
-            const SizedBox(height: Constants.defaultPadding),
+            const SizedBox(height: Constants.largePadding),
             Expanded(
               child: BlocConsumer<
                   RepositorySearchBloc,
@@ -91,6 +103,9 @@ class _HomeViewState extends State<HomeView> {
 
                   if (state is RepositorySearchLoaded) {
                     return ListView.builder(
+                      padding: const EdgeInsets.only(
+                        right: kIsWeb ? 8 : 0,
+                      ),
                       itemCount: state.repositories.length,
                       itemBuilder: (context, index) {
                         final repository = state.repositories[index];
