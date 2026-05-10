@@ -9,13 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31156ed7-5dfc-4980-920e-5f99385ce151" name="Changes" comment="feat: implement custom theming, branding, and UI enhancements">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_event.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/repository_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/repository_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositories/github_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/github_repository.dart" afterDir="false" />
-    </list>
+    <list default="true" id="31156ed7-5dfc-4980-920e-5f99385ce151" name="Changes" comment="feat: implement local caching for repository search results" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778420320019</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: implement local caching for repository search results">
+      <option name="closed" value="true" />
+      <created>1778420930250</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778420930250</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,6 +125,7 @@
     <MESSAGE value="feat: setup clean architecture structure" />
     <MESSAGE value="feat: implement repository search flow" />
     <MESSAGE value="feat: implement custom theming, branding, and UI enhancements" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement custom theming, branding, and UI enhancements" />
+    <MESSAGE value="feat: implement local caching for repository search results" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement local caching for repository search results" />
   </component>
 </project>

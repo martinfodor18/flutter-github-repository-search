@@ -92,6 +92,23 @@ class AppTheme {
       bodyLarge: TextStyle(fontSize: 18, color: darkColor),
       bodyMedium: TextStyle(fontSize: 16, color: darkColor),
     ),
+
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: darkColor,
+
+      contentTextStyle: const TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+      ),
+
+      shape: RoundedRectangleBorder(
+        borderRadius:
+        BorderRadius.circular(16),
+      ),
+
+      behavior: SnackBarBehavior.floating,
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -185,5 +202,23 @@ class AppTheme {
 
       bodyMedium: TextStyle(fontSize: 16, color: Colors.white),
     ),
+
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: primaryColor,
+
+      contentTextStyle: const TextStyle(
+        color: darkColor,
+        fontSize: 16,
+        fontWeight: FontWeight.w600,
+      ),
+
+      shape: RoundedRectangleBorder(
+        borderRadius:
+        BorderRadius.circular(16),
+      ),
+
+      behavior: SnackBarBehavior.floating,
+    ),
+
   );
 }
