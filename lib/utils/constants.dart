@@ -15,7 +15,17 @@ class Constants {
 
   static const String searchHintText = 'Search repositories...';
 
+  static const String forksText = 'Forks';
+
+  static const String createdText = 'Created';
+
+  static const String updatedText = 'Updated';
+
   static const String searchButtonText = 'Search';
+
+  static const String profileButtonText = 'GitHub Profile';
+
+  static const String repositoryText = 'Repository';
 
   static const String noDescriptionText = 'No description';
 
