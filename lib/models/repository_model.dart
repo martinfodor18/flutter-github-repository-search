@@ -1,4 +1,6 @@
-class RepositoryModel {
+import 'package:equatable/equatable.dart';
+
+class RepositoryModel extends Equatable {
   final String name;
   final String? description;
 
@@ -29,9 +31,7 @@ class RepositoryModel {
     required this.updatedAt,
   });
 
-  factory RepositoryModel.fromJson(
-      Map<String, dynamic> json,
-      ) {
+  factory RepositoryModel.fromJson(Map<String, dynamic> json) {
     return RepositoryModel(
       name: json['name'],
 
@@ -39,23 +39,17 @@ class RepositoryModel {
 
       ownerName: json['owner']['login'],
 
-      ownerAvatarUrl:
-      json['owner']['avatar_url'],
+      ownerAvatarUrl: json['owner']['avatar_url'],
 
-      ownerProfileUrl:
-      json['owner']['html_url'],
+      ownerProfileUrl: json['owner']['html_url'],
 
       repositoryUrl: json['html_url'],
 
       forksCount: json['forks_count'],
 
-      createdAt: DateTime.parse(
-        json['created_at'],
-      ),
+      createdAt: DateTime.parse(json['created_at']),
 
-      updatedAt: DateTime.parse(
-        json['updated_at'],
-      ),
+      updatedAt: DateTime.parse(json['updated_at']),
     );
   }
 
@@ -74,11 +68,23 @@ class RepositoryModel {
 
       'forks_count': forksCount,
 
-      'created_at':
-      createdAt.toIso8601String(),
+      'created_at': createdAt.toIso8601String(),
 
-      'updated_at':
-      updatedAt.toIso8601String(),
+      'updated_at': updatedAt.toIso8601String(),
     };
   }
+
+  @override
+  List<Object?> get props => [
+    name,
+    description,
+    ownerName,
+    ownerAvatarUrl,
+    ownerProfileUrl,
+    repositoryUrl,
+    forksCount,
+    createdAt,
+    updatedAt,
+  ];
+
 }

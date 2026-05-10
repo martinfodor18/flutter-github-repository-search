@@ -9,15 +9,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31156ed7-5dfc-4980-920e-5f99385ce151" name="Changes" comment="feat: implement SnackBar theme for light and dark modes">
-      <change afterPath="$PROJECT_DIR$/lib/pages/repository_details_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/router/app_router.dart" afterDir="false" />
+    <list default="true" id="31156ed7-5dfc-4980-920e-5f99385ce151" name="Changes" comment="feat: implement repository details page and navigation logic">
+      <change afterPath="$PROJECT_DIR$/test/blocs/repository_search_bloc_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/blocs/repository_search/repository_search_state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/repository_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/repository_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/repository_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/repository_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Flutter Test.tests in repository_search_bloc_test.dart.executor": "Run",
     "Flutter.main.dart.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -78,6 +76,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\marti\StudioProjects\flutter_github_repository_search\assets\icon" />
     </key>
+  </component>
+  <component name="RunManager" selected="Flutter Test.tests in repository_search_bloc_test.dart">
+    <configuration name="tests in repository_search_bloc_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/blocs/repository_search_bloc_test.dart" />
+      <option name="useRegexp" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter Test.tests in repository_search_bloc_test.dart" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -135,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778421170632</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: implement repository details page and navigation logic">
+      <option name="closed" value="true" />
+      <created>1778425093970</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778425093970</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,6 +163,7 @@
     <MESSAGE value="feat: implement custom theming, branding, and UI enhancements" />
     <MESSAGE value="feat: implement local caching for repository search results" />
     <MESSAGE value="feat: implement SnackBar theme for light and dark modes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement SnackBar theme for light and dark modes" />
+    <MESSAGE value="feat: implement repository details page and navigation logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement repository details page and navigation logic" />
   </component>
 </project>
